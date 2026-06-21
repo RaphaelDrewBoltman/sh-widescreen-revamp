@@ -1,9 +1,9 @@
 ﻿using Reloaded.Mod.Interfaces;
 using Reloaded.Universal.Redirector.Interfaces;
-using sonicheroes.guis.widescreenrevamp.Configuration;
+using sh_widescreen_revamp.Configuration;
 using IReloadedHooks = Reloaded.Hooks.ReloadedII.Interfaces.IReloadedHooks;
 
-namespace sonicheroes.guis.widescreenrevamp.Template
+namespace sh_widescreen_revamp.Template
 {
     /// <summary>
     /// Represents information passed in from the mod loader template to the implementing mod.

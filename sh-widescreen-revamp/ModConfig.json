@@ -1,0 +1,31 @@
+{
+  "ModId": "sonicheroes.guis.widescreenrevamp",
+  "ModName": "SH Essentials: Widescreen Revamp",
+  "ModAuthor": "Raphael Drew Boltman",
+  "ModVersion": "2.01",
+  "ModDescription": "we have it, boys. the widescreen!",
+  "ModDll": "sh-widescreen-revamp.dll",
+  "ModIcon": "preview.png",
+  "ModR2RManagedDll32": "x86/sh-widescreen-revamp.dll",
+  "ModR2RManagedDll64": "x64/sh-widescreen-revamp.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "Tags": [],
+  "CanUnload": false,
+  "HasExports": false,
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "sh-widescreen-revamp.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+  "ModDependencies": [
+    "criware.filesystem.hook",
+    "reloaded.universal.redirector",
+    "sonicheroes.essentials.graphics",
+    "sonicheroes.utils.toner"
+  ],
+  "OptionalDependencies": [],
+  "SupportedAppId": [
+    "tsonic_win.exe"
+  ],
+  "ProjectUrl": ""
+}

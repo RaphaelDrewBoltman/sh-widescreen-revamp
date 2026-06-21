@@ -3,14 +3,14 @@ using Reloaded.Mod.Interfaces;
 using Reloaded.Memory;
 using Reloaded.Memory.Interfaces;
 using Reloaded.Universal.Redirector.Interfaces;
-using sonicheroes.guis.widescreenrevamp.Configuration;
-using sonicheroes.guis.widescreenrevamp.Template;
+using sh_widescreen_revamp.Configuration;
+using sh_widescreen_revamp.Template;
 using System;
 using System.Xml.Linq;
 using System.Runtime.CompilerServices;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace sonicheroes.guis.widescreenrevamp
+namespace sh_widescreen_revamp
 {
     /// <summary>
     /// Your mod logic goes here.
@@ -88,7 +88,7 @@ namespace sonicheroes.guis.widescreenrevamp
         void AddAssetPath(string style)
         {
             string modpath = Path.GetFullPath(_modLoader.GetDirectoryForModId(_modConfig.ModId));
-            _redirector?.AddRedirectFolder(modpath + "\\Assets\\" + style, "/dvdroot");
+            _redirector?.AddRedirectFolder(modpath + "\\assets\\" + style, "/dvdroot");
         }
 
         public Mod(ModContext context)
@@ -103,7 +103,7 @@ namespace sonicheroes.guis.widescreenrevamp
 
             var memory = Memory.Instance;
 
-            // Force life icon
+            // Force Life Icon
             if (_configuration.PermanentLifeIcon)
             {
                 WriteByte(0x420E87, 0x5);
@@ -111,7 +111,7 @@ namespace sonicheroes.guis.widescreenrevamp
                 WriteNop(0x420DFB, 2);
             }
 
-            // Change buttons based on selected console
+            // Change HUD Buttons based on selected console
             switch (_configuration.HUDStyle)
             {
                 case Config.Styles.XBOX:
@@ -128,12 +128,12 @@ namespace sonicheroes.guis.widescreenrevamp
                     break;
             }
 
-            // Score bonus
+            // Score Bonus
             WriteFloat(0x781B30, -0.115f); // X
             WriteFloat(0x5B4996, -0.115f); // X
             WriteFloat(0x78A3EC, 0.72f);   // Y
 
-            // Levelup effects
+            // Level UP Effects
             WriteFloat(0x8DDCE4, 1.2f);     // POS LEFT X
             WriteFloat(0x8DDCEC, 1.13f);    // POS BOTTOM X
             WriteFloat(0x8DDCF4, 1.25f);    // POS RIGHT X
@@ -144,7 +144,7 @@ namespace sonicheroes.guis.widescreenrevamp
             WriteFloat(0x8DDCDC, 0.0015f);  // SPD RIGHT X
             WriteFloat(0x8DDCE0, 0.0005f);  // SPD RIGHT Y
 
-            // Special stage gauge
+            // Special Stage Gauge
             float gaugex = 565.0f;
             float gaugey = 30.5f;
             WriteFloat(0x527407, gaugex);
@@ -154,29 +154,29 @@ namespace sonicheroes.guis.widescreenrevamp
             WriteFloat(0x527402, gaugey);
             WriteFloat(0x52759D, gaugey + 6.0f);
 
-            // Special stage level up
+            // Special Stage Level UP
             WriteFloat(0x527927, 580.0f);  // SP X
             WriteFloat(0x527941, 610.0f);  // MP X
             WriteFloat(0x5279B2, 32.25f);  // Y
             WriteFloat(0x78A2D8, 32.25f);  // Y
             WriteFloat(0x52798C, 32.25f);  // Y
 
-            // Special stage score bonus
+            // Special Stage Score Bonus
             WriteFloat(0x52698C, -56.5f); // X
             WriteFloat(0x5269B1, -47.5f); // X
             WriteFloat(0x5269A2, -38.5f); // X
 
-            // Extra mission information
-            WriteFloat(0x78A23C, 1.359f); // Chaotix item count
-            WriteFloat(0x5AA0E0, 0.974f); // Time trial
+            // Extra Mission Information
+            WriteFloat(0x5AA0E0, 0.974f); // Time Trial
+            WriteFloat(0x78A23C, 1.359f); // Chaotix Item Count
 
             // Bobsled
             WriteFloat(0x4067C9, 1.08f);
             WriteFloat(0x4067B9, 1.08f);
 
-            // Denied leader 2P
+            // Denied Leader 2P
             WriteFloat(0x8DCCC4, -0.5585f); // Levels 2P
-            WriteFloat(0x8DCCAC, -0.56f);   // Denied leader 2P
+            WriteFloat(0x8DCCAC, -0.56f);   // Denied Leader 2P
 
             // Now Loading
             nuint c_NowLoadingCoord = 0x743C38;
@@ -186,28 +186,28 @@ namespace sonicheroes.guis.widescreenrevamp
                 c_NowLoadingCoord += 8;
             }
 
-            // Normal result screen
-            WriteFloat(0x438217, 0.7025f); // Speed level
-            WriteFloat(0x438227, 0.7025f); // Fly level
-            WriteFloat(0x438237, 0.7025f); // Power level
+            // Normal Results Screen
+            WriteFloat(0x438217, 0.7025f); // Speed Level
+            WriteFloat(0x438227, 0.7025f); // Fly Level
+            WriteFloat(0x438237, 0.7025f); // Power Level
             WriteFloat(0x438304, 0.66f);   // Time
             WriteFloat(0x438320, 0.89f);   // Ring
             WriteFloat(0x438330, 0.815f);  // Time Bonus
-            WriteFloat(0x4384FB, 0.681f);   // Total score
-            WriteFloat(0x438340, 1.005f); // Time star
-            WriteFloat(0x438350, 1.005f); // Ring star
-            WriteFloat(0x438509, 1.005f); // Total star
+            WriteFloat(0x4384FB, 0.681f);   // Total Score
+            WriteFloat(0x438340, 1.005f); // Time Star
+            WriteFloat(0x438350, 1.005f); // Ring Star
+            WriteFloat(0x438509, 1.005f); // Total Star
 
-            // Boss result screen
+            // Boss Results Screen
             WriteFloat(0x4385C7, 0.61f); // Time
             WriteFloat(0x4385ED, 1.0f); // Star
 
-            // Special stage result screen
+            // Special Stage Results Screen
             WriteFloat(0x438779, 0.716f);  // Score
             WriteFloat(0x438823, 0.6708f); // Time
-            WriteFloat(0x438833, 0.815f);  // Time score
-            WriteFloat(0x438843, 0.82f);   // Gauge score
-            WriteFloat(0x4389ED, 0.6875f); // Total score
+            WriteFloat(0x438833, 0.815f);  // Time Score
+            WriteFloat(0x438843, 0.82f);   // Gauge Score
+            WriteFloat(0x4389ED, 0.6875f); // Total Score
 
             // Normal HUD
             RingAnchor->x = -0.0515f;
@@ -216,17 +216,18 @@ namespace sonicheroes.guis.widescreenrevamp
             ScoreAnchor->x = -0.115f;
             LivesAnchor->x = -0.015f;
             LivesAnchor->y = 0.081f;
-            WriteFloat(0x41E913, 0.482f); // Special Stage related
-            WriteFloat(0x41E7A9, 0.482f); // Special Stage related
+            WriteFloat(0x41E913, 0.482f); // Special Stage Related
+            WriteFloat(0x41E7A9, 0.482f); // Special Stage Related
 
-            // Fix horizontal scaling (could also remove the function calls)
+            // Fix Horizontal Scaling (could also remove the function calls)
             WriteFloat(0x406849, 1.0f); // Bobsled
             WriteFloat(0x406CAF, 1.0f); // Bobsled
             WriteFloat(0x41E131, 1.0f); // Goal
             WriteFloat(0x41E26D, 1.0f); // Continue
             WriteFloat(0x41E31C, 1.0f); // General UI
+            WriteFloat(0x78A394, 1.33f); // Subtitles
 
-            // Fix inverse horizontal scaling (could also remove the function calls)
+            // Fix Inverse Horizontal Scaling (could also remove the function calls)
             WriteFloat(0x8DCBFC, 1.0f);
             WriteFloat(0x8DCC48, 1.0f);
             WriteFloat(0x8DCC84, 1.0f);
@@ -234,7 +235,7 @@ namespace sonicheroes.guis.widescreenrevamp
             WriteFloat(0x8DCCB4, 1.0f);
             WriteFloat(0x8DCCE0, 1.0f);
             WriteFloat(0x8DCCF8, 1.0f);
-            WriteFloat(0x4C3CAE, 1.0f); // Slot machine 2d effects
+            WriteFloat(0x4C3CAE, 1.0f); // Slot Machine 2D Effects
         }
 
         #region Standard Overrides

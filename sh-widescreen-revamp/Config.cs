@@ -1,8 +1,9 @@
 ﻿using Reloaded.Mod.Interfaces.Structs;
-using sonicheroes.guis.widescreenrevamp.Template.Configuration;
+using sh_widescreen_revamp.Template.Configuration;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
-namespace sonicheroes.guis.widescreenrevamp.Configuration
+namespace sh_widescreen_revamp.Configuration
 {
     public class Config : Configurable<Config>
     {
@@ -26,23 +27,28 @@ namespace sonicheroes.guis.widescreenrevamp.Configuration
             The `DefaultValue` attribute is used as part of the `Reset` button in Reloaded-Launcher.
         */
 
-        [DisplayName("Permanent life icon")]
-        [Description("Always show life icon in the bottom left corner.")]
+        [DisplayName("Permanent Life Icon")]
+        [Description("Always show the life icon in the bottom left corner.")]
         [DefaultValue(true)]
         public bool PermanentLifeIcon { get; set; } = true;
 
 
-        [DisplayName("HUD style")]
-        [Description("Change the action button style.")]
-        [DefaultValue("PC")]
+        [DisplayName("HUD Style")]
+        [Description("Change the game's button style.")]
+        [DefaultValue("Windows")]
         public Styles HUDStyle { get; set; } = Styles.Windows;
 
         public enum Styles
         {
+            [Display(Name = "Windows")]
             Windows,
+            [Display(Name = "GameCube")]
             GameCube,
+            [Display(Name = "XBOX")]
             XBOX,
+            [Display(Name = "Dreamcast")]
             Dreamcast,
+            [Display(Name = "PlayStation 2")]
             PlayStation2,
         }
     }

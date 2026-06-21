@@ -7,10 +7,10 @@ using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using Reloaded.Mod.Interfaces.Internal;
 using Reloaded.Universal.Redirector.Interfaces;
-using sonicheroes.guis.widescreenrevamp.Configuration;
-using sonicheroes.guis.widescreenrevamp.Template.Configuration;
+using sh_widescreen_revamp.Configuration;
+using sh_widescreen_revamp.Template.Configuration;
 
-namespace sonicheroes.guis.widescreenrevamp.Template
+namespace sh_widescreen_revamp.Template
 {
     public class Startup : IMod
     {

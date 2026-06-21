@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sonicheroes.guis.widescreenrevamp", "sonicheroes.guis.widescreenrevamp\sonicheroes.guis.widescreenrevamp.csproj", "{21B323C9-D5B2-4F96-B9CD-EFE36F413096}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sh-widescreen-revamp", "sh-widescreen-revamp\sh-widescreen-revamp.csproj", "{21B323C9-D5B2-4F96-B9CD-EFE36F413096}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

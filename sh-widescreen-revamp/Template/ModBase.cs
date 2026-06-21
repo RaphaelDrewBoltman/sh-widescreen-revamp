@@ -1,6 +1,6 @@
-﻿using sonicheroes.guis.widescreenrevamp.Configuration;
+﻿using sh_widescreen_revamp.Configuration;
 
-namespace sonicheroes.guis.widescreenrevamp.Template
+namespace sh_widescreen_revamp.Template
 {
     /// <summary>
     /// Base class for implementing mod functionality.

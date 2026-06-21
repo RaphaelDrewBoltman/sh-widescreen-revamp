@@ -1,7 +1,7 @@
 ﻿using Reloaded.Mod.Interfaces;
-using sonicheroes.guis.widescreenrevamp.Configuration;
+using sh_widescreen_revamp.Configuration;
 
-namespace sonicheroes.guis.widescreenrevamp.Template.Configuration
+namespace sh_widescreen_revamp.Template.Configuration
 {
     public class Configurator : IConfiguratorV3
     {

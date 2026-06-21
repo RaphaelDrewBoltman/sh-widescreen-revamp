@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace sonicheroes.guis.widescreenrevamp.Template.Configuration
+namespace sh_widescreen_revamp.Template.Configuration
 {
     public class Utilities
     {
