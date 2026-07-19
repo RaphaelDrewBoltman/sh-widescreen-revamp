@@ -27,12 +27,7 @@ namespace sh_widescreen_revamp.Configuration
             The `DefaultValue` attribute is used as part of the `Reset` button in Reloaded-Launcher.
         */
 
-        [DisplayName("Permanent Life Icon")]
-        [Description("Always show the life icon in the bottom left corner.")]
-        [DefaultValue(true)]
-        public bool PermanentLifeIcon { get; set; } = true;
-
-
+        [Category("HUD Settings")]
         [DisplayName("HUD Style")]
         [Description("Change the game's button style.")]
         [DefaultValue("Windows")]
@@ -51,6 +46,12 @@ namespace sh_widescreen_revamp.Configuration
             [Display(Name = "PlayStation 2")]
             PlayStation2,
         }
+
+        [Category("HUD Settings")]
+        [DisplayName("Permanent Life Icon")]
+        [Description("Always show the life icon in the bottom left corner.")]
+        [DefaultValue(true)]
+        public bool PermanentLifeIcon { get; set; } = true;
     }
 
     /// <summary>

@@ -433,18 +433,18 @@ extern "C" __declspec(dllexport) void InitMod(const char* path)
     WriteData((float*)0x4C3CAE, 1.0f); // Slot Machine 2D Effects
 
     // Fix 4/3 hud positions after horizontal scaling changes
-    WriteData((float*)0x7BB2F0, 0.081f); // GDISP_SCORE_X
-    WriteData((float*)0x7BB2E8, 0.081f); // GDISP_TIME_X
-    WriteData((float*)0x7BB2C8, 0.154f); // GDISP_RING_X
+    WriteData((float*)0x7BB2F0, 0.0805f); // GDISP_SCORE_X
+    WriteData((float*)0x7BB2E8, 0.0805f); // GDISP_TIME_X
+    WriteData((float*)0x7BB2C8, 0.153f); // GDISP_RING_X
     WriteData((float*)0x7BB2CC, 0.785f); // GDISP_RING_Y
-    WriteData((float*)0x7BB2D0, 0.154f); // GDISP_RING2P_X1
+    WriteData((float*)0x7BB2D0, 0.153f); // GDISP_RING2P_X1
     WriteData((float*)0x7BB2D4, 0.860f); // GDISP_RING2P_Y1
     WriteData((float*)0x7BB2D8, 0.708f); // GDISP_RING2P_X2
     WriteData((float*)0x7BB2DC, 0.860f); // GDISP_RING2P_Y2
-    WriteData((float*)0x5B4996, 0.081f); // BONUS_POINT_X
+    WriteData((float*)0x5B4996, 0.0805f); // BONUS_POINT_X
     WriteData((float*)0x78A3EC, 0.72f); // BONUS_POINT_Y
-    WriteData((float*)0x781B30, 0.081f); // BONUS_POINT_SPEED
-    WriteData((float*)0x7BB2E0, 0.189f); // GDISP_LIVE_X
+    WriteData((float*)0x781B30, 0.0805f); // BONUS_POINT_SPEED
+    WriteData((float*)0x7BB2E0, 0.19f); // GDISP_LIVE_X
     WriteData((float*)0x7BB2E4, 0.081f); // GDISP_LIVE_Y
     WriteData((float*)0x8DDCE4, 0.99f); // LVLUP_SPD_X
     WriteData((float*)0x8DDCE8, 0.69f); // LVLUP_SPD_Y
@@ -456,11 +456,11 @@ extern "C" __declspec(dllexport) void InitMod(const char* path)
     WriteData((float*)0x8DDCD8, 0.0025f); // LVLUP_FLY_TRAG_Y
     WriteData((float*)0x8DDCDC, 0.0015f); // LVLUP_POW_TRAG_X
     WriteData((float*)0x8DDCE0, 0.0025f); // LVLUP_POW_TRAG_Y
-    WriteData((float*)0x4067C9, 0.874f); // BOBS_BEST_X
-    WriteData((float*)0x4067B9, 0.874f); // BOBS_TIME_X
+    WriteData((float*)0x4067C9, 0.873f); // BOBS_BEST_X
+    WriteData((float*)0x4067B9, 0.873f); // BOBS_TIME_X
     WriteData((float*)0x5AA0E0, 0.768f); // EXTRA_TIME_X
-    WriteData((float*)0x78A23C, 1.155f); // EXTRA_COUNT_X
-    WriteData((float*)0x41E913, 0.481f); // SS_TIME_X
+    WriteData((float*)0x78A23C, 1.153f); // EXTRA_COUNT_X
+    WriteData((float*)0x41E913, 0.482f); // SS_TIME_X
     WriteData((float*)0x527407, 458.0f); // SS_GAUGE_BASE_X
     WriteData((float*)0x527402, 30.5f); // SS_GAUGE_BASE_Y
     WriteData((float*)0x5274BF, 466.0f); // SS_GAUGE_LVL1_X
@@ -472,20 +472,20 @@ extern "C" __declspec(dllexport) void InitMod(const char* path)
     WriteData((float*)0x52698C, 45.0f); // SS_SCORE01_X
     WriteData((float*)0x5269A2, 66.0f); // SS_SCORE02_X
     WriteData((float*)0x5269B1, 57.0f); // SS_SCORE03_X
-    WriteData((float*)0x438217, 0.702f); // RSLA_SPDLV_X
-    WriteData((float*)0x438227, 0.702f); // RSLA_FLYLV_X
-    WriteData((float*)0x438237, 0.702f); // RSLA_POWLV_X
-    WriteData((float*)0x438304, 0.659f); // RSLA_TIME_X
-    WriteData((float*)0x438320, 0.889f); // RSLA_RING_X
-    WriteData((float*)0x438330, 0.814f); // RSLA_BONUS_X
-    WriteData((float*)0x4384FB, 0.687f); // RSLA_TOTAL_X
-    WriteData((float*)0x438340, 1.005f); // RSLA_STAR_TIME_X
-    WriteData((float*)0x438350, 1.005f); // RSLA_STAR_RING_X
-    WriteData((float*)0x438509, 1.005f); // RSLA_STAR_TOTAL_X
-    WriteData((float*)0x4385C7, 0.61f); // RSLB_TIME_X
-    WriteData((float*)0x4385ED, 1.0f); // RSLB_STAR_TIME_X
+    WriteData((float*)0x438217, 0.693f); // RSLA_SPDLV_X
+    WriteData((float*)0x438227, 0.693f); // RSLA_FLYLV_X
+    WriteData((float*)0x438237, 0.693f); // RSLA_POWLV_X
+    WriteData((float*)0x438304, 0.650f); // RSLA_TIME_X
+    WriteData((float*)0x438320, 0.881f); // RSLA_RING_X
+    WriteData((float*)0x438330, 0.806f); // RSLA_BONUS_X
+    WriteData((float*)0x4384FB, 0.672f); // RSLA_TOTAL_X
+    WriteData((float*)0x438340, 1.002f); // RSLA_STAR_TIME_X
+    WriteData((float*)0x438350, 1.002f); // RSLA_STAR_RING_X
+    WriteData((float*)0x438509, 1.002f); // RSLA_STAR_TOTAL_X
+    WriteData((float*)0x4385C7, 0.613f); // RSLB_TIME_X
+    WriteData((float*)0x4385ED, 1.002f); // RSLB_STAR_TIME_X
     WriteData((float*)0x438779, 0.716f); // RSLS_SCORE_X
-    WriteData((float*)0x438823, 0.6708f); // RSLS_TIME_X
+    WriteData((float*)0x438823, 0.67f); // RSLS_TIME_X
     WriteData((float*)0x438833, 0.815f); // RSLS_TIMESCR_X
     WriteData((float*)0x438843, 0.82f); // RSLS_GAUGESCR_X
     WriteData((float*)0x4389ED, 0.6875f); // RSLS_TOTAL_X

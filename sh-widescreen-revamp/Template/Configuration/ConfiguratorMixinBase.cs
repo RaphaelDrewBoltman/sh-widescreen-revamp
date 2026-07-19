@@ -18,7 +18,7 @@ namespace sh_widescreen_revamp.Template.Configuration
             // You can add any Configurable here.
             return new IUpdatableConfigurable[]
             {
-                Configurable<Config>.FromFile(Path.Combine(configFolder, "Config.json"), "Default Config")
+                Configurable<Config>.FromFile(Path.Combine(configFolder, "config.json"), "Configure Widescreen Revamp")
             };
         }
 
