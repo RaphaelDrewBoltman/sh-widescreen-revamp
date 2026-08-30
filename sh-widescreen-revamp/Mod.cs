@@ -88,11 +88,11 @@ namespace sh_widescreen_revamp
         {
             _modLoader = context.ModLoader;
             _hooks = context.Hooks;
+            _redirector = context.Redirector;
             _logger = context.Logger;
             _owner = context.Owner;
-            _modConfig = context.ModConfig;
             _configuration = context.Configuration;
-            _redirector = context.Redirector;
+            _modConfig = context.ModConfig;
 
             var memory = Memory.Instance;
 

@@ -15,6 +15,8 @@
   "IsUniversalMod": false,
   "ModDependencies": [
     "criware.filesystem.hook",
+    "reloaded.sharedlib.hooks",
+    "reloaded.universal.fileemulationframework.heroes.one",
     "reloaded.universal.redirector",
     "sonicheroes.utils.toner"
   ],
