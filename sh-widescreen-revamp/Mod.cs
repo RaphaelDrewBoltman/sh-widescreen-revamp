@@ -104,20 +104,28 @@ namespace sh_widescreen_revamp
                 WriteNop(0x420DFB, 2);
             }
 
-            // Change HUD Buttons based on selected console
+            // Change HUD Buttons, Subtitles and Dialog based on the selected console
             switch (_configuration.HUDStyle)
             {
-                case Config.Styles.XBOX:
-                    AddAssetPath("XBOX");
-                    break;
                 case Config.Styles.GameCube:
                     AddAssetPath("GameCube");
+                    Memory.Instance.SafeWrite(0x424F1D, new byte[] { 0x00 });
+                    Memory.Instance.SafeWrite(0x424F21, new byte[] { 0x00 });
                     break;
-                case Config.Styles.PlayStation2:
-                    AddAssetPath("PlayStation 2");
+                case Config.Styles.XBOX:
+                    AddAssetPath("XBOX");
+                    Memory.Instance.SafeWrite(0x424F1D, new byte[] { 0x02 });
+                    Memory.Instance.SafeWrite(0x424F21, new byte[] { 0x06 });
                     break;
                 case Config.Styles.Dreamcast:
                     AddAssetPath("Dreamcast");
+                    Memory.Instance.SafeWrite(0x424F1D, new byte[] { 0x02 });
+                    Memory.Instance.SafeWrite(0x424F21, new byte[] { 0x06 });
+                    break;
+                case Config.Styles.PlayStation2:
+                    AddAssetPath("PlayStation 2");
+                    Memory.Instance.SafeWrite(0x424F1D, new byte[] { 0x01 });
+                    Memory.Instance.SafeWrite(0x424F21, new byte[] { 0x03 });
                     break;
             }
 
